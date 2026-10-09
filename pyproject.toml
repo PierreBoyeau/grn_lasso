@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grn_lasso"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scanpy",
+    "scikit-learn",
+    "scipy",
+    "scvi-tools",
+    "torch",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyterlab", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
